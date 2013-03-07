@@ -7,9 +7,6 @@ module RailsAdmin
     module Actions
       class ApproveEvents < RailsAdmin::Config::Actions::Base
 				RailsAdmin::Config::Actions.register(self)
-				register_instance_option :collection do
-          true
-        end
 
         register_instance_option :http_methods do
           [:get, :post]
