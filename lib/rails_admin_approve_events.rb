@@ -24,6 +24,8 @@ module RailsAdmin
           end
 				end
 				register_instance_option :bulkable? do
+          parent_model = bindings[:abstract_model].try(:config).try(:parent)
+          puts parent_model
           true
         end			 
 				register_instance_option :link_icon do
