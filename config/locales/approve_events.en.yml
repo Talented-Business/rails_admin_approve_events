@@ -1,0 +1,10 @@
+en:
+  admin:
+    actions:
+      approve_events:
+        title: "Approve Events"
+        menu: "Approve Events menu"
+        breadcrumb: "Approve Events"
+        link: "Approve Events"
+        bulk_link: "Approve Events selected"
+        done: "Approved"
