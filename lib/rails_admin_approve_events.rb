@@ -19,10 +19,14 @@ module RailsAdmin
 					Proc.new do
             if request.post? 
               @objects = list_entries(@model_config, :approve_events)
+              count = 0
               @objects.each do |object|
-                object.update_attribute(:approved, true)
+                if object.published == "published" 
+                   object.update_attribute(:approved, true)  
+                   count = count + 1
+                end    
               end  
-              flash[:notice] = "You have approved #{@objects.count} event(s)."
+              flash[:notice] = "You have approved #{count} event(s)."
               redirect_to back_or_index
             else
               render @action.template_name
